@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <!-- {# Bokeh styles and JS links #}-->
+    <script type="text/javascript" src="{{ url_for('static', filename='js/bokeh-0.11.1.min.js') }}"> </script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bokeh-0.11.1.min.css') }}">
+
+    <title>{{ title }}</title>
+
+</head>
+
+<body>
+
+    <div id="container">
+        <div id="content">
+
+            <div id="select_chart_form">
+
+                <form action="" method="POST">
+
+                    <fieldset id="forms">
+                            <input type="text" name="chart" placeholder="Chart"/>
+                    </fieldset>
+
+                </form>
+
+            </div>
+
+            <div id="main_content">
+
+                <div id="info_table_div">
+                    {{ info|safe }}
+                </div>
+
+                <div id="finance_chart">
+                {{ script|safe }}
+                {{ div|safe }}
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
