@@ -150,6 +150,25 @@ def index():
     return render_template('index.html', title = title, script = script, div = div, info = info)
 
 
+app.route("/rehnung/")
+def rehnung():
+
+    title = "Rehnung"
+
+    Tour_42_1410 = 1
+    Tour_46_1645 = 1
+    Einzelpreis_tour42 = 20
+    Einzelpreis_tour46 = 15
+
+    Gesamtpreis_42 = Tour_42_1410 * Einzelpreis_tour42
+
+
+
+
+
+    return render_template('rehnung.html', title = title)
+
+
 
 if __name__ == '__main__':
     app.run()
